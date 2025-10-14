@@ -1,0 +1,304 @@
+/* ==================================== */
+/* 1. VARIABLES & BASE RESET            */
+/* ==================================== */
+
+:root {
+    /* Padelea Camp Color Palette */
+    --color-background: #F3F6C8;      /* Soft Cream/Sand (Main Background) */
+    --color-text-primary: #293223;    /* Dark Green/Off-Black (Text) */
+    --color-brand-accent: #C5D401;    /* Bright Lime Green (CTA/Accent) */
+    --color-brand-dark: #7B9101;      /* Dark Olive Green (Borders/Elements) */
+    --color-white: #ffffff;
+    --font-heading: 'Georgia', serif;  /* For an editorial/storytelling tone */
+    --font-body: 'Arial', sans-serif;
+}
+
+/* Base Reset for a clean, modern look */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Main container to center content and limit width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Utility class for centering text */
+.text-center {
+    text-align: center;
+}
+
+
+/* ==================================== */
+/* 2. TYPOGRAPHY AND HIERARCHY          */
+/* ==================================== */
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Large, responsive hero title */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 1.5em;
+    padding-bottom: 0.1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Style for subtitles/taglines using the dark brand color */
+.subtitle {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--color-brand-dark);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Emphasis on body text (e.g., key phrases in paragraphs) */
+.body strong {
+    font-weight: 700;
+    color: var(--color-brand-dark);
+}
+
+
+/* ==================================== */
+/* 3. SECTION STRUCTURE                 */
+/* ==================================== */
+
+section {
+    padding: 80px 0; /* Generous spacing for a "light" look */
+    border-bottom: 1px solid rgba(41, 50, 35, 0.1); /* Subtle separator line */
+}
+
+/* 3.1 HERO SECTION */
+#hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* You would add your immersive background image here */
+    /* background-image: url('YOUR_IMMERSIVE_IMAGE_URL'); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 100px;
+}
+/* Ensures text readability over the image (if present) */
+#hero .container {
+    padding: 60px 24px;
+    background-color: rgba(243, 246, 200, 0.85); /* Semi-transparent background for text box */
+    border-radius: 12px;
+}
+
+
+/* 3.2 VALUE PROPOSITION / CORE BENEFITS (Storytelling Layout) */
+#value-proposition, #benefits {
+    text-align: left;
+    max-width: 800px; /* Limits text width for better reading flow */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==================================== */
+/* 4. BUTTONS AND CALL TO ACTION        */
+/* ==================================== */
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-brand-accent);
+    color: var(--color-text-primary);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    border: 2px solid var(--color-brand-accent);
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-brand-dark);
+    color: var(--color-background);
+    border-color: var(--color-brand-dark);
+    transform: translateY(-2px); /* Lift effect for motion */
+}
+
+/* Secondary button style (e.g., for the Weekend Journal subscription) */
+.cta-button.secondary {
+    background-color: transparent;
+    border-color: var(--color-brand-dark);
+    color: var(--color-text-primary);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--color-brand-dark);
+    color: var(--color-white);
+}
+
+/* ==================================== */
+/* 5. CARDS (SCORE METRICS / MY SPORT SPACE) */
+/* ==================================== */
+
+/* Card container for grid layout */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--color-white); /* White background for contrast */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(41, 50, 35, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hover effect to drive interest */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: var(--color-brand-dark);
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Specific style for the numbered steps inside the cards */
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-brand-accent);
+    line-height: 1;
+    margin-bottom: 0.2em;
+}
+
+
+/* ==================================== */
+/* 6. STAFF & TESTIMONIALS              */
+/* ==================================== */
+
+#staff {
+    text-align: center;
+}
+
+#staff .profile-box {
+    max-width: 450px;
+    margin: 40px auto 0;
+    padding: 30px;
+    border: 3px solid var(--color-brand-dark);
+    border-radius: 12px;
+    background-color: var(--color-white);
+}
+
+#testimonials {
+    background-color: var(--color-brand-accent); /* Use accent color to make it pop */
+    padding: 60px 0;
+    text-align: center;
+}
+
+#testimonials blockquote {
+    font-style: italic;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.4;
+    color: var(--color-text-primary);
+}
+
+#testimonials cite {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-brand-dark);
+}
+
+
+/* ==================================== */
+/* 7. FOOTER                            */
+/* ==================================== */
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--color-text-primary); /* Strong contrast */
+    color: var(--color-background); /* Light text */
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-white);
+}
+
+.social-links {
+    margin: 15px 0;
+}
+
+/* ==================================== */
+/* 8. MEDIA QUERIES (RESPONSIVENESS)    */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .cta-button {
+        display: block; /* Full width buttons on mobile */
+        width: 100%;
+        text-align: center;
+    }
+}

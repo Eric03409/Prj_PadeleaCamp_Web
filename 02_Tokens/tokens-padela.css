@@ -1,0 +1,85 @@
+:root {
+  /* =========================================================================
+     COLORES DE MARCA Y PALETA
+     ========================================================================= */
+
+  /* Colores principales para branding, botones y elementos interactivos */
+  --color-primary-default: #C5D401; /* Verde Lima (Principal) */
+  --color-primary-hover: #B0BF00;   /* Tono ligeramente más oscuro para el hover */
+
+  /* Colores secundarios para acentos, detalles o elementos que requieren destaque */
+  --color-secondary-default: #7B9101; /* Verde Oliva (Acento) */
+  --color-secondary-hover: #97AD20;   /* Tono ligeramente más claro para el hover */
+
+  /* Colores de fondo */
+  --color-background-default: #F3F6C8; /* Fondo Base claro y suave */
+  --color-background-secondary: #FFFFFF; /* Fondo secundario (para tarjetas o secciones) */
+
+  /* Colores de texto */
+  --color-text-default: #293223; /* Texto oscuro para el cuerpo del párrafo */
+  --color-text-light: #FFFFFF;   /* Texto claro (para usar sobre primary/secondary) */
+
+  /* Colores de feedback (Estandarizados) */
+  --color-feedback-success: #4CAF50; /* Éxito (Verde) */
+  --color-feedback-error: #F44336;   /* Error (Rojo) */
+  --color-feedback-warning: #FFC107; /* Alerta (Amarillo/Ámbar) */
+  --color-feedback-info: #2196F3;    /* Info (Azul) */
+
+
+  /* =========================================================================
+     TIPOGRAFÍA
+     ========================================================================= */
+
+  /* Fuente principal (Para títulos, logos - Chewy, el toque divertido) */
+  --font-family-primary: 'Chewy', cursive;
+  /* Fuente para cuerpo de texto y UI (Para legibilidad - Open Sans, la base) */
+  --font-family-body: 'Open Sans', sans-serif;
+
+  /* Tamaños de fuente */
+  --font-size-base: 1rem;       /* 16px (Base) */
+  --font-size-h1: 3rem;         /* Tamaño de título grande (48px) */
+  --font-size-body-sm: 0.875rem; /* Tamaño de texto pequeño (14px) */
+
+  /* Pesos de fuente */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Altura de línea */
+  --line-height-base: 1.6;
+
+
+  /* =========================================================================
+     ESPECIADO Y LAYOUT
+     ========================================================================= */
+
+  /* Espaciado (Usando una escala basada en 0.5rem = 8px) */
+  --spacing-unit: 0.5rem; /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 2rem;     /* 32px */
+  --spacing-lg: 4rem;     /* 64px */
+
+  /* Bordes y Sombras */
+  --border-radius-base: 0.5rem; /* 8px (Radio de esquina) */
+
+  --shadow-default: 0 4px 6px -1px rgba(41, 50, 35, 0.1), 0 2px 4px -2px rgba(41, 50, 35, 0.06);
+  --shadow-button-hover: 0 8px 15px -3px rgba(197, 212, 1, 0.5); /* Efecto "lift" con sombra de color */
+
+  /* =========================================================================
+     TRANSICIONES Y ANIMACIÓN
+     ========================================================================= */
+
+  --time-transition-default: 300ms;
+  --easing-default: cubic-bezier(0.4, 0, 0.2, 1); /* Curva de transición suave */
+
+  /* =========================================================================
+     IMAGENES
+     ========================================================================= */
+
+  --image-radius-default: 0.75rem; /* 12px para imágenes y tarjetas */
+  --image-radius-avatar: 50%; /* Redondeado perfecto para avatares */
+
+  --aspect-ratio-square: 1 / 1;
+  --aspect-ratio-video: 16 / 9;
+
+  --image-filter-grayscale: grayscale(100%);
+}

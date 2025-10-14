@@ -1,0 +1,65 @@
+/* 03_Layout/main-grid.css */
+
+/* =========================================================================
+   1. CONTENEDOR PRINCIPAL
+   Define el área central de trabajo para que el contenido no se pegue a los bordes
+   ========================================================================= */
+.container {
+    max-width: 1280px; /* Un poco más ancho que la media para el look moderno */
+    margin-left: auto;
+    margin-right: auto;
+    /* Usa el espaciado de tus Tokens para el relleno lateral */
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+}
+
+/* =========================================================================
+   2. CUADRÍCULA BASE (Grid)
+   Define las reglas de la cuadrícula general, incluyendo el espaciado
+   ========================================================================= */
+.grid {
+    display: grid;
+    /* Usa el espaciado Mediano de tus Tokens (32px) */
+    gap: var(--spacing-md);
+}
+
+/* =========================================================================
+   3. CLASES REUTILIZABLES DE CUADRÍCULA
+   Estas clases deciden cómo se organizan los elementos
+   ========================================================================= */
+
+/* Para listas de tarjetas o productos que se adaptan automáticamente */
+.grid-auto-fit {
+    /* Muestra tantos elementos como quepan, sin ser más pequeños de 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Cuadrícula de 2 columnas (para features o secciones pequeñas) */
+.grid-2-columns {
+    /* En móvil, solo una columna por defecto */
+    grid-template-columns: 1fr;
+}
+
+/* Cuadrícula de 3 columnas (para galería de fotos o testimonios) */
+.grid-3-columns {
+    /* En móvil, solo una columna por defecto */
+    grid-template-columns: 1fr;
+}
+
+
+/* =========================================================================
+   4. ADAPTACIÓN A PANTALLAS GRANDES (Desktop)
+   A partir de 768px (Tablet/Desktop)
+   ========================================================================= */
+@media (min-width: 768px) {
+    
+    .grid-2-columns {
+        /* A partir de desktop, dos columnas de igual tamaño */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-3-columns {
+        /* A partir de desktop, tres columnas de igual tamaño */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

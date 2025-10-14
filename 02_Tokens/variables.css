@@ -1,0 +1,24 @@
+/* DESIGN TOKENS GLOBALES PARA SBM */
+
+:root {
+    /* 1. COLORES */
+    --color-primario: #003366;      /* Azul Oscuro (Marca/Botón Principal) */
+    --color-secundario: #00ffff;    /* Cyan Vibrante (Acento/Interacciones) */
+    --color-texto-claro: #ffffff;   /* Texto sobre fondos oscuros */
+    --color-texto-oscuro: #1a1a1a;  /* Texto principal */
+    --color-fondo: #f4f7f9;         /* Fondo de la página base */
+
+    /* 2. TIPOGRAFÍA */
+    --font-base: 16px;
+    --font-size-s: 0.875rem;        /* Texto pequeño (14px) */
+    --font-size-l: 1.25rem;         /* Títulos pequeños (20px) */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* 3. ESPACIADO (Modelo de Caja: Padding y Margin, basado en 8px) */
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 16px;                /* Espaciado medio estándar */
+    --space-l: 24px;
+    --space-xl: 40px;
+}

@@ -1,0 +1,34 @@
+/* 01_Base/normalize.css */
+
+/* 1. RESET BÁSICO DEL MODELO DE CAJA */
+/* Asegura que padding y border no cambien el tamaño total del elemento */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. ELIMINAR MÁRGENES POR DEFECTO */
+/* Esto elimina el espaciado predeterminado del navegador para que TUS TOKENS controlen el layout */
+body, h1, h2, h3, p, ul, ol, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. MEJORAR LA LECTURA Y RENDERIZADO */
+html {
+    -webkit-text-size-adjust: 100%; /* Evita cambios de zoom en iOS */
+}
+body {
+    line-height: 1.5; /* Espaciado cómodo entre líneas */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura */
+}
+
+/* 4. FACILITAR EL USO DE FLEXBOX EN IMÁGENES Y MEDIA */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%; /* Las imágenes nunca desbordan el contenedor */
+}
+
+/* 5. HERENCIA DE FUENTES (Ayuda a la consistencia) */
+input, button, textarea, select {
+    font: inherit;
+}

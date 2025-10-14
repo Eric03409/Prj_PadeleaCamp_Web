@@ -1,0 +1,49 @@
+/* 04_Componentes/button.css (¡CORREGIDO!) */
+
+.button {
+    /* Diseño: Forma y Color (Usando Tokens) */
+    background-color: var(--color-primary-default); /* CORREGIDO */
+    color: var(--color-text-light);                /* CORREGIDO */
+    border: none;
+    /* Usaremos el radio que definiste en los Tokens */
+    border-radius: var(--border-radius-base);
+
+    /* Mantenemos el cursor y la decoración */
+    cursor: pointer;
+    text-decoration: none;
+
+    /* Contenido (Tipografía) */
+    font-size: var(--font-size-base); /* CORREGIDO */
+    font-weight: var(--font-weight-bold);
+
+    /* Padding (Relleno) */
+    /* Padding: var(--spacing-md) arriba/abajo y var(--spacing-lg) izquierda/derecha */
+    padding: var(--spacing-md) var(--spacing-lg); /* CORREGIDO */
+
+    /* Construcción: Flexbox (Para centrar el texto/ícono) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Transición suave para el color y la sombra (¡añadida!) */
+    transition: background-color var(--time-transition-default) var(--easing-default), 
+                box-shadow var(--time-transition-default) var(--easing-default);
+}
+
+/* Estado al pasar el ratón (Hover) */
+.button:hover {
+    /* Usamos el Token de Hover para el color primario (más oscuro) */
+    background-color: var(--color-primary-hover);
+    /* El texto sigue siendo blanco, ya que el color de fondo es oscuro. */
+    color: var(--color-text-light); 
+    /* ¡Añadimos la sombra que definiste en tus Tokens! */
+    box-shadow: var(--shadow-button-hover);
+}
+
+/* Estado Deshabilitado */
+.button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}

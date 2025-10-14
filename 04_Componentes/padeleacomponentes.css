@@ -1,0 +1,32 @@
+/* ---------------------------------- */
+/* COMPONENTES: BOTONES Y LINKS (USANDO LA CLASE .button YA DEFINIDA) */
+/* ---------------------------------- */
+
+/* * NOTA: Aquí hemos eliminado la clase .btn duplicada.
+* Ahora solo necesitas la clase .button del archivo button.css
+* y le añades la clase .button-primary para el estilo específico.
+*/
+
+.button-primary {
+    /* Aquí se sobreescribe el color de texto del botón base */
+    color: var(--color-text-default); 
+    box-shadow: var(--shadow-default);
+    text-transform: uppercase;
+}
+
+.button-primary:hover {
+    /* El hover ya está en button.css, aquí solo añadimos la sombra y la elevación */
+    box-shadow: var(--shadow-button-hover);
+    transform: translateY(-2px); /* Efecto de elevación (muy bueno) */
+}
+
+/* Y si necesitas otro color de botón, lo creas aquí (ej: botón del CTA Final) */
+.cta-button {
+    background-color: var(--color-background-default); /* Fondo verde claro */
+    color: var(--color-text-default); /* Texto oscuro */
+    border: 2px solid var(--color-background-secondary);
+}
+
+.cta-button:hover {
+    background-color: var(--color-background-secondary);
+}
