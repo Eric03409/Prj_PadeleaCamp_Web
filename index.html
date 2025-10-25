@@ -1,551 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PADELEA CAMP - Play, Move, Connect | Padel and Wellness Retreats</title>
-    
-    <meta name="google-site-verification" content="ZnCotPICSMOYyJnAHsjmiIwZI7u9hTo1sb_y54ombgo" />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <title>Padelea Camp</title>
+    <!-- Carga de Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* ======================================================= */
-        /* 1. DESIGN TOKENS (CSS Variables) - AJUSTES FINALES */
-        /* ======================================================= */
+        /* Configuración de color y fuente mediante los tokens de diseño */
         :root {
-            /* Colores */
-            --clr-primary: #C5D401;        /* Verde Vivo */
-            --clr-primary-hover: #A9BA01;  
-            --clr-secondary: #7B9101;      /* Verde Oliva Oscuro */
-            --clr-background: #F8FAF0;     /* Fondo muy claro y suave */
-            --clr-background-alt: #FFFFFF; /* Fondo alternativo (Blanco Puro) */
-            --clr-text: #222B1E;           /* Negro-Verdoso profundo */
-            --clr-text-light: #FFFFFF;
-            /* Tipografía */
-            --ff-heading: 'Chewy', cursive;
-            --ff-body: 'Open Sans', sans-serif;
-            --fs-base: 18px; /* Ligeramente más grande para mejor lectura */
-            --fs-h1: 3.5rem; /* Ajuste final */
-            --fs-h2: 2.5rem; 
-            --fs-h3: 1.5rem; 
-            --fs-small: 0.9rem;
-            --fw-regular: 400;
-            --fw-semi-bold: 600; 
-            --fw-extra-bold: 800; 
-            --lh-base: 1.6; /* Espaciado de línea profesional */
-            /* Espaciado */
-            --space-sm: 0.75rem;
-            --space-md: 1.5rem;
-            --space-lg: 3rem;
-            --space-xl: 6rem;   /* Espaciado vertical generoso */
-            /* Bordes y Sombras: Sutil pero presente */
-            --border-radius: 12px; 
-            --shadow-default: 0 4px 20px rgba(0,0,0,0.08); 
-            /* Transiciones */
-            --transition-duration: 0.3s;
-            --transition-curve: ease-in-out;
+            --base-bg: #F3F6C8; /* Color de Fondo Base */
+            --dark-text: #293223; /* Color de Texto Oscuro */
+            --accent: #7B9101; /* Color de Acento */
         }
-
-        /* ======================================================= */
-        /* 2. BASE STYLES AND UTILITIES */
-        /* ======================================================= */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
+        /* Forzando la altura mínima del cuerpo para un diseño limpio en móvil */
         body {
-            font-family: var(--ff-body);
-            font-size: var(--fs-base);
-            line-height: var(--lh-base);
-            color: var(--clr-text);
-            background-color: var(--clr-background);
-            scroll-behavior: smooth;
-            padding-top: 80px; /* Espacio para el header fijo */
+            min-height: 100vh;
         }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 var(--space-md);
-        }
-
-        section {
-            padding: var(--space-xl) 0;
-            text-align: center;
-        }
-        
-        .bg-alt {
-            background-color: var(--clr-background-alt);
-        }
-
-        /* Headings */
-        h1, h2, h3 {
-            font-family: var(--ff-heading);
-            color: var(--clr-text);
-            margin-bottom: var(--space-sm);
-            line-height: 1.1;
-        }
-        h2 { font-size: var(--fs-h2); }
-        .subtitle { 
-            font-family: var(--ff-body);
-            font-weight: var(--fw-extra-bold);
-            font-size: var(--fs-h3);
-            color: var(--clr-secondary);
-            margin-bottom: var(--space-lg);
-        }
-        
-        /* Texto Destacado */
-        p strong, li strong {
-            font-weight: var(--fw-extra-bold);
-            color: var(--clr-secondary);
-        }
-        
-        /* Botones (CTA) */
-        .btn {
-            display: inline-block;
-            background-color: var(--clr-primary);
-            color: var(--clr-text);
-            padding: 1rem 3rem; 
-            border-radius: 50px; 
-            text-decoration: none;
-            font-weight: var(--fw-extra-bold);
-            transition: all var(--transition-duration) var(--transition-curve);
-            box-shadow: 0 5px 0 var(--clr-secondary); 
-            margin-top: var(--space-lg);
-            cursor: pointer;
-            border: none;
-            font-size: var(--fs-base);
-        }
-        .btn:hover {
-            background-color: var(--clr-primary-hover);
-            box-shadow: 0 1px 0 var(--clr-secondary); 
-            transform: translateY(4px); 
-        }
-
-        /* Cards/Modules (SIN CAMBIOS SOLICITADOS) */
-        .card {
-            background-color: var(--clr-background-alt);
-            padding: var(--space-lg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-default);
-            text-align: left;
-            border-top: 5px solid var(--clr-primary);
-            transition: transform var(--transition-duration), box-shadow var(--transition-duration);
-        }
-        .card:hover {
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            transform: translateY(-5px);
-        }
-        
-        /* Lists for Features */
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin-top: var(--space-lg);
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .feature-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: var(--space-md);
-            text-align: left;
-            font-weight: var(--fw-regular);
-        }
-        .feature-list li::before {
-            content: '→'; 
-            position: absolute;
-            left: 0;
-            color: var(--clr-secondary);
-            font-weight: var(--fw-extra-bold);
-            font-size: 1.2rem;
-            line-height: 1.2;
-        }
-
-        /* IMAGES STYLES */
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-            align-items: center;
-        }
-        .gallery-container img {
-            width: 100%;
-            max-width: 600px; 
-            height: auto;
-            border-radius: var(--border-radius);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15); 
-            object-fit: cover;
-        }
-        
-        /* ======================================================= */
-        /* 3. LAYOUT AND SPECIFIC SECTIONS */
-        /* ======================================================= */
-
-        /* Header Fijo (Navegación) */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: var(--clr-background-alt);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 1000;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px var(--space-md);
-        }
-        .logo-link {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        .header-logo {
-            width: 50px; 
-            height: auto;
-            margin: 0;
-        }
-        .header-title {
-            font-family: var(--ff-heading);
-            font-size: 1.5rem;
-            color: var(--clr-text);
-            margin-left: 10px;
-            display: none; 
-        }
-        
-        /* Hero Section (AJUSTADO) */
-        #hero {
-            background: linear-gradient(180deg, var(--clr-primary) 0%, #dceb33 100%);
-            padding: var(--space-xl) var(--space-md);
-            min-height: 95vh; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        /* El logo central del hero fue eliminado */
-        #hero h1 {
-            font-size: var(--fs-h1);
-            color: var(--clr-text);
-            margin-top: 0; /* Asegura que el título esté bien posicionado */
-        }
-        #hero p {
-            font-size: calc(var(--fs-base) * 1.8);
-            font-weight: var(--fw-extra-bold);
-            color: var(--clr-secondary);
-        }
-
-
-        /* Destination Cards (SIN CAMBIOS SOLICITADOS) */
-        .destination-card {
-            background-color: var(--clr-background-alt);
-            padding: var(--space-md);
-            border-radius: var(--border-radius);
-            border: 1px solid var(--clr-primary);
-            transition: all var(--transition-duration);
-            box-shadow: var(--shadow-default);
-        }
-        .destination-card:hover {
-            background-color: var(--clr-primary);
-            color: var(--clr-text);
-            transform: scale(1.03);
-            border-color: var(--clr-secondary);
-        }
-        .destination-card h4 {
-            font-family: var(--ff-heading);
-            font-size: 1.6rem;
-            margin-bottom: var(--space-sm);
-        }
-
-        /* The Guide (Founder) - AJUSTADO */
-        #the-guide .guide-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: var(--space-lg);
-            margin-top: var(--space-lg);
-        }
-        .guide-avatar {
-            /* Se eliminan bordes y sombras detrás de la imagen */
-            width: 200px; 
-            height: 200px;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: none; 
-            border: 4px solid var(--clr-background-alt); /* Solo borde blanco para definir el círculo */
-        }
-        #the-guide p {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .guide-info {
-            max-width: 500px;
-        }
-
-
-        /* Footer */
-        footer {
-            background-color: var(--clr-text);
-            color: var(--clr-text-light);
-            padding: var(--space-lg) 0;
-            font-size: var(--fs-small);
-        }
-        footer a {
-            color: var(--clr-primary);
-            text-decoration: none;
-            font-weight: var(--fw-semi-bold);
-            transition: color var(--transition-duration);
-        }
-        footer a:hover {
-            color: var(--clr-primary-hover);
-        }
-
-
-        /* ======================================================= */
-        /* 4. MEDIA QUERIES (Desktop/Tablet) */
-        /* ======================================================= */
-        @media (min-width: 768px) {
-            
-            body {
-                padding-top: 100px; 
-            }
-            .header-content {
-                padding: 15px var(--space-xl);
-            }
-            .header-logo {
-                width: 70px; 
-            }
-            .header-title {
-                display: block; 
-            }
-            
-            /* Tipografía de Desktop */
-            h1 { font-size: 5.5rem; }
-            h2 { font-size: 3.5rem; }
-            .subtitle { font-size: 1.8rem; }
-            
-            .container {
-                padding: 0 var(--space-xl);
-            }
-            .grid-3-col {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .grid-4-col {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            /* Guía de escritorio */
-            #the-guide .guide-content {
-                flex-direction: row;
-                text-align: left;
-                gap: var(--space-xl);
-                max-width: 1000px; 
-                margin: var(--space-xl) auto 0;
-                align-items: center; 
-            }
-            .guide-avatar {
-                width: 300px; 
-                height: 300px;
-            }
-        }
-
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'base-bg': 'var(--base-bg)',
+                        'dark-text': 'var(--dark-text)',
+                        'accent': 'var(--accent)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="font-sans bg-base-bg text-dark-text antialiased p-6 sm:p-8 flex justify-center">
 
-    <header>
-        <div class="container header-content">
-            <a href="#hero" class="logo-link">
-                <img src="img/Padelea Camp Logo.png" alt="Padelea Camp Logo" class="header-logo">
-                <span class="header-title">PADELEA CAMP</span>
-            </a>
+    <!-- Contenedor principal para limitar el ancho y centrar el contenido (mejor legibilidad) -->
+    <main class="w-full max-w-xl space-y-8 py-10">
+
+        <!-- Título Principal -->
+        <header class="space-y-4">
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+                Bienvenido a Padelea Camp.
+            </h1>
+            <p class="text-xl sm:text-2xl font-medium">
+                Somos un ecosistema de experiencias en la intersección del pádel y actividades.
+            </p>
+        </header>
+
+        <!-- Sección de Servicios -->
+        <section class="space-y-6 pt-4">
+            <p class="text-lg sm:text-xl font-semibold mb-6">
+                Ahora mismo, hay 5 formas para conectar:
+            </p>
+
+            <div class="space-y-6">
+                
+                <!-- Servicio 1: Padelea Retreats (NUEVO) -->
+                <div class="flex">
+                    <span class="text-accent text-xl font-bold mr-4 flex-shrink-0">[1]</span>
+                    <div>
+                        <!-- Enlace con borde punteado para que se note que es un link -->
+                        <a href="https://padeleacamp.netlify.app/" target="_blank" rel="noopener noreferrer" 
+                           class="inline-block font-bold text-xl text-accent hover:text-dark-text transition duration-200 
+                                  border-b-2 border-dotted border-accent pb-0.5 cursor-pointer">
+                            <span>Padelea Retreats</span>
+                        </a>
+                        <p class="text-base mt-1">Retiros de fin de semana que combinan clínicas de pádel de alto nivel con experiencias de alojamiento premium y actividades complementarias para un crecimiento integral.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Padelea Tour (Experiences) -->
+                <div class="flex">
+                    <span class="text-accent text-xl font-bold mr-4 flex-shrink-0">[2]</span>
+                    <div>
+                        <h2 class="text-xl font-bold text-accent hover:underline cursor-pointer">Padelea Tour (Experiences)</h2>
+                        <p class="text-base mt-1">Viajes temáticos, workations y estancias prolongadas en villas y destinos inspiradores. El ambiente ideal para elevar tu juego, hacer teambuilding o construir ideas en un entorno curado.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Padelea Clinics -->
+                <div class="flex">
+                    <span class="text-accent text-xl font-bold mr-4 flex-shrink-0">[3]</span>
+                    <div>
+                        <h2 class="text-xl font-bold text-accent hover:underline cursor-pointer">Padelea Clinics</h2>
+                        <p class="text-base mt-1">Sesiones de entrenamiento intensivo en un club selecto de CDMX, donde un coach te guiará personalmente para pulir tu técnica, táctica y mentalidad de juego.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Padelea Spaces -->
+                <div class="flex">
+                    <span class="text-accent text-xl font-bold mr-4 flex-shrink-0">[4]</span>
+                    <div>
+                        <h2 class="text-xl font-bold text-accent hover:underline cursor-pointer">Padelea Spaces</h2>
+                        <p class="text-base mt-1">Nuestra plataforma digital para encontrar y reservar canchas top, villas, y espacios work-friendly que impulsan tus retiros de pádel y co-creación.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Padelea Pro Club (Próximamente) -->
+                <div class="flex">
+                    <span class="text-accent text-xl font-bold mr-4 flex-shrink-0">[5]</span>
+                    <div>
+                        <h2 class="text-xl font-bold text-dark-text opacity-70">Próximamente: Padelea Pro Club (Powered by Partners)</h2>
+                        <p class="text-base mt-1 text-dark-text opacity-80">Soluciones profesionales de gestión, optimización de ingresos y profesionalización de instalaciones, ayudando a los clubes a ser más rentables y exitosos.</p>
+                    </div>
+                </div>
             </div>
-    </header>
+        </section>
 
-    <section id="hero">
-        <div class="container">
-            <h1 class="hero-title">PADELEA CAMP</h1>
-            <p>Play, Move, Connect.</p>
-        </div>
-    </section>
-
-    <section id="invitation">
-        <div class="container">
-            <h2>The Invitation</h2>
-            <p class="subtitle">Join the Tribe. Live in Motion.</p>
-            <p class="intro-text" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
-                A weekend to refine your game, breathe nature, and join a tribe that lives in motion. Welcome to Padelea.
-            </p>
-            <p style="font-weight: var(--fw-semi-bold); margin-top: var(--space-md);">
-                <strong>New season, new camps — let’s padel where the waves crash.</strong>
-            </p>
-            <a href="https://form.typeform.com/to/VqMGBeV4" target="_blank" class="btn">
-                → Join the Waitlist / Get the 2026 Camp Calendar
-            </a>
-        </div>
-    </section>
-
-    <section id="experience" class="bg-alt">
-        <div class="container">
-            <h2>The Padelea Experience</h2>
-            <p class="subtitle">More Than a Game. It’s a Reset.</p>
-            <p style="max-width: 800px; margin: 0 auto var(--space-lg);">
-                We create spaces for people who live in motion — players, creators, and explorers who seek to connect, move, and recharge through sport, nature, and community.
-                Each Padelea weekend is a curated escape designed to elevate your padel, balance your energy, and surround you with people who share your drive.
-            </p>
-            <p style="font-weight: var(--fw-semi-bold);">
-                <strong>Step away. Sweat with intention. Join a community moving with deeper purpose.</strong>
-            </p>
-        </div>
-    </section>
-
-    <section id="transformation">
-        <div class="container">
-            <h2>The Transformation</h2>
-            <p class="subtitle">The Weekend, Reimagined.</p>
+        <!-- Texto de Cierre y Contacto (PIE DE PÁGINA ACTUALIZADO) -->
+        <footer class="pt-8 space-y-6 border-t border-dark-text/20 mt-10">
             
-            <div class="grid-3-col">
-                <div class="card">
-                    <h3 style="font-family: var(--ff-body); color: var(--clr-secondary);">Elevate Your Game</h3>
-                    <p>Tailored coaching that adapts to your level. Leave with sharper tactics and measurable improvement.</p>
-                </div>
-                <div class="card">
-                    <h3 style="font-family: var(--ff-body); color: var(--clr-secondary);">The Full Retreat</h3>
-                    <p>Padel, adventure, yoga, healthy food, and deep conversations — a true reset for body and mind.</p>
-                </div>
-                <div class="card">
-                    <h3 style="font-family: var(--ff-body); color: var(--clr-secondary);">A Community of Motion</h3>
-                    <p>Beyond the court, build real friendships and a network of players living intentionally.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="gallery" class="bg-alt">
-        <div class="container">
-            <h2>Vibes in Motion</h2>
-            <p class="subtitle">Your Next Adventure is Waiting.</p>
-            <div class="gallery-container">
-                <img 
-                    src="img/campers-disfrutando-1.png" 
-                    alt="A group of Padelea Camp campers laughing and high-fiving after an intense padel match."
-                >
-                <img 
-                    src="img/campers-disfrutando-2.png" 
-                    alt="Two campers on the padel court smiling and enjoying a rest moment during the camp."
-                >
-            </div>
-        </div>
-    </section>
-
-    <section id="score-metrics">
-        <div class="container">
-            <h2>The Edge: Score Metrics</h2>
-            <p class="subtitle">Unlock Precision. Stop Guessing. Start Dominating.</p>
-            <p style="max-width: 700px; margin: 0 auto;">Every camp includes access to Score Metrics, our proprietary AI platform that transforms match data into actionable insights.</p>
-            <ul class="feature-list">
-                <li><strong>Strike Diagnostics</strong> — Understand your key shots, error ratios, and success zones on the court.</li>
-                <li><strong>Positional Mastery</strong> — Visualize your movement and own the court with tactical precision.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="my-sport-space" class="bg-alt">
-        <div class="container">
-            <h2>The Tribe: My Sport Space</h2>
-            <p class="subtitle">The Community Continues.</p>
-            <p style="max-width: 700px; margin: 0 auto;">After camp, the connection doesn’t fade. My Sport Space is our digital hub to keep you growing — find partners, track progress, and celebrate wins.</p>
-            <ul class="feature-list">
-                <li><strong>Find Your Match</strong> — Connect with players by level and location for post-camp matches.</li>
-                <li><strong>Organize & Track</strong> — Plan and monitor your statistics after every game.</li>
-                <li><strong>Stay in Motion</strong> — Share your highlights and stay inspired by the community.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="destinations">
-        <div class="container">
-            <h2>Destinations Sneak Peek</h2>
-            <p class="subtitle">A Glimpse Into the Journey</p>
-            <p style="max-width: 800px; margin: 0 auto;">Every Padelea Camp happens in a handpicked paradise across Mexico. We merge sport, wellness, and adventure in unforgettable settings.</p>
-            
-            <div class="grid-4-col">
-                <div class="destination-card">
-                    <h4>Tulum</h4>
-                    <p style="font-size: small;">Sunrise yoga, jungle courts, and turquoise mornings.</p>
-                </div>
-                <div class="destination-card">
-                    <h4>Puerto Escondido</h4>
-                    <p style="font-size: small;">Surf, bonfires, and live music by the beach.</p>
-                </div>
-                <div class="destination-card">
-                    <h4>La Paz</h4>
-                    <p style="font-size: small;">Snorkeling with sea lions and sunset dinners on the bay.</p>
-                </div>
-                <div class="destination-card">
-                    <h4>Valle de Bravo</h4>
-                    <p style="font-size: small;">Lakeside runs, cabins, and holiday gatherings by the fire.</p>
-                </div>
-            </div>
-            
-            <a href="https://form.typeform.com/to/VqMGBeV4" target="_blank" class="btn">
-                → Get the 2026 Calendar (via Typeform)
-            </a>
-        </div>
-    </section>
-
-    <section id="the-guide" class="bg-alt">
-        <div class="container">
-            <h2>The Guide</h2>
-            <p class="subtitle">Guided by Intention. Meet the Founder.</p>
-
-            <div class="guide-content">
-                <div class="guide-avatar" style="background-image: url('img/coach-eric-medina.png');">
-                </div>
-                <div class="guide-info">
-                    <h3 style="font-family: var(--ff-body); color: var(--clr-secondary);">Eric Medina – Coach & Founder of Padelea Camp</h3>
-                    <p style="font-weight: var(--fw-semi-bold);">With over 2,000 coaching sessions, Eric designs experiences that merge competitive padel, mindful purpose, and real disconnection.</p>
-                    <p>He believes the best points aren't played on court — they're shared after the match.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cta-final" style="background-color: var(--clr-primary); padding-bottom: var(--space-xl);">
-        <div class="container">
-            <h2>Ready to Move?</h2>
-            <p class="subtitle" style="color: var(--clr-text);">Your next adventure starts here.</p>
-            <p style="max-width: 700px; margin: 0 auto var(--space-lg);">
-                Our camps are limited and curated to ensure an intimate, high-quality experience. Be the first to receive the 2026 Camp Calendar and exclusive early-access registration.
+            <!-- Cierre principal -->
+            <p class="text-xl sm:text-2xl italic font-semibold leading-relaxed mb-4">
+                Pronto seremos el hogar más grande del mundo para los amantes del pádel que buscan transformar su juego... y su forma de conectar.
             </p>
-            <a href="https://form.typeform.com/to/VqMGBeV4" target="_blank" class="btn" style="background-color: var(--clr-text); color: var(--clr-primary); box-shadow: 0 5px 0 var(--clr-primary-hover);">
-                → Join the Waitlist
-            </a>
-            <p class="small-text" style="margin-top: var(--space-md); font-weight: var(--fw-semi-bold);">You’ll instantly receive a message with our next destination lineup.</p>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>Stay Connected</p>
-            <p>For inquiries and partnerships: <a href="mailto:padeleacamp@gmail.com">padeleacamp@gmail.com</a></p>
-            <p>Follow our energy: 
-                <a href="https://www.instagram.com/padeleacamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                    @padelea.camp (Instagram)
-                </a>
-            </p>
-            <div class="legal">
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            <!-- Información de contacto y newsletter -->
+            <div class="space-y-4 text-base">
+                
+                <!-- Social Media Vibra -->
+                <p>
+                    <a href="https://www.instagram.com/padeleacamp" target="_blank" rel="noopener noreferrer" class="font-bold text-accent hover:text-dark-text transition duration-200">
+                        [@PadeleaCamp]
+                    </a> es el mejor lugar para entender nuestra vibra.
+                </p>
+
+                <!-- Newsletter CTA -->
+                <p class="mt-4">
+                    Si tienes curiosidad, enviaremos una <span class="font-bold">Monday Mail</span> semanal (próximamente) con actualizaciones <span class="italic">behind-the-scenes</span> y aprendizajes de nuestra comunidad. Deja tu correo si quieres revisarla. Es bastante genial (y gratuita).
+                </p>
+
+                <!-- Formulario de ejemplo (para la estética) -->
+                <form class="flex flex-col sm:flex-row gap-2 pt-2" onsubmit="event.preventDefault(); console.log('Email submitted.');">
+                    <input type="email" placeholder="Introduce tu correo aquí..." class="flex-grow p-3 rounded-lg border-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent bg-base-bg text-dark-text placeholder-dark-text/60" required>
+                    <button type="submit" class="bg-accent text-base-bg font-bold py-3 px-6 rounded-lg shadow-md hover:bg-dark-text transition duration-200">
+                        Suscribirme
+                    </button>
+                </form>
+                
+                <!-- Instagram Link -->
+                <p class="pt-2">
+                    Únete a la comunidad de Padelea Camp en IG: <a href="https://www.instagram.com/padeleacamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="text-accent underline hover:text-dark-text transition duration-200">
+                        @padeleacamp
+                    </a>
+                </p>
             </div>
-        </div>
-    </footer>
+
+            <!-- Firma -->
+            <p class="pt-4 text-sm italic opacity-80">
+                Big love, - Eric y el Team Padelea ❤️‍🔥
+            </p>
+        </footer>
+
+    </main>
 
 </body>
 </html>
