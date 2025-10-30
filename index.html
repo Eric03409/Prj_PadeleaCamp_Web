@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<!-- Idioma actualizado a Inglés -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padelea Camp - Hub</title>
-    <!-- Carga de Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carga de la fuente Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -100,10 +97,8 @@
 </head>
 <body class="font-sans bg-base-bg text-dark-text antialiased p-6 sm:p-8 flex justify-center relative">
 
-    <!-- Contenedor principal (Hub) -->
     <main class="w-full max-w-xl space-y-8 py-10">
 
-        <!-- Título Principal (Traducido) -->
         <header class="space-y-4 text-center">
             <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
                 Padelea Camp
@@ -113,10 +108,8 @@
             </p>
         </header>
 
-        <!-- Sección de Enlaces (Textos actualizados y traducidos) -->
         <section class="space-y-4 pt-4">
 
-            <!-- Link 1: Padelea Retreats (Features 1, 2, 5) -->
             <a href="#" role="button"
                data-modal-target="quick-view-modal"
                data-title="Padelea Retreats"
@@ -128,20 +121,17 @@
                       transform transition duration-300 ease-in-out hover:scale-[1.02] cursor-pointer">
                 
                 <div class="flex items-center gap-5">
-                    <!-- Icono (Feature 2) -->
-                    <div class="flex-shrink-0 bg-accent/10 text-accent p-3 rounded-full group-hover:bg-accent group-hover:text-base-bg transition-colors duration-300">
-                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v18M19 3v18M12 3v18M3 12h18M3 6h18M3 18h18M8 3h8M8 18h8M3 3h1m-1 3h1m-1 3h1m-1 3h1m-1 3h1m-1 3h1m13-18h1m-1 3h1m-1 3h1m-1 3h1m-1 3h1m-1 3h1M5 12a7 7 0 1 0 14 0 7 7 0 0 0-14 0z"></path></svg>
-                        <!-- Icono alternativo (Palmera): 
-                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17.5V10c0-1.1.9-2 2-2h1c1.1 0 2 .9 2 2v7.5m-4 0h4m-4 0H4c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2h1m11 9.5V10c0-1.1-.9-2-2-2h-1c-1.1 0-2 .9-2 2v7.5m4 0h-4m4 0h1c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2h-1m-4 7.5V10c0-1.1-.9-2-2-2h-1c-1.1 0-2 .9-2 2v7.5m4 0h-4m4 0h-4m0-7.5c0-3 2-5.5 5-5.5s5 2.5 5 5.5V10"></path></svg>
-                        -->
+                    <div class="flex-shrink-0">
+                        <span class="text-xl sm:text-2xl font-bold text-accent">[01]</span>
                     </div>
                     
                     <div class="flex-grow">
-                        <h2 class="text-xl sm:text-2xl font-bold text-dark-text flex items-center gap-3">
-                            Padelea Retreats
-                            <!-- Badge (Feature 5) -->
-                            <span class="text-xs font-semibold bg-accent text-base-bg py-0.5 px-3 rounded-full hidden sm:inline-block">MÁS POPULAR</span>
-                        </h2>
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-xl sm:text-2xl font-bold text-dark-text">
+                                Padelea Retreats
+                            </h2>
+                            <span class="text-xs font-semibold bg-accent text-base-bg py-0.5 px-3 rounded-full hidden sm:inline-block">MOST POPULAR</span>
+                        </div>
                         <p class="text-base text-dark-text/70 mt-1">
                             Padel clinics and premium lodging.
                         </p>
@@ -149,7 +139,6 @@
                 </div>
             </a>
 
-            <!-- Link 2: Padelea Tour (Experiences) -->
             <a href="#" role="button"
                data-modal-target="quick-view-modal"
                data-title="Padelea Tour (Experiences)"
@@ -161,10 +150,10 @@
                       transform transition duration-300 ease-in-out hover:scale-[1.02] cursor-pointer">
                 
                 <div class="flex items-center gap-5">
-                    <!-- Icono (Feature 2) -->
-                    <div class="flex-shrink-0 bg-accent/10 text-accent p-3 rounded-full group-hover:bg-accent group-hover:text-base-bg transition-colors duration-300">
-                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13v-6m0 6l5.447 2.724A1 1 0 0016 16.382V5.618a1 1 0 00-1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0022 16.382V5.618a1 1 0 00-1.447-.894L15 7m0 10v-6m0 6l-6-3"></path></svg>
+                    <div class="flex-shrink-0">
+                        <span class="text-xl sm:text-2xl font-bold text-accent">[02]</span>
                     </div>
+                    
                     <div>
                         <h2 class="text-xl sm:text-2xl font-bold text-dark-text">
                             Padelea Tour (Experiences)
@@ -176,7 +165,6 @@
                 </div>
             </a>
 
-            <!-- Link 3: Padelea Clinics -->
             <a href="#" role="button"
                data-modal-target="quick-view-modal"
                data-title="Padelea Clinics"
@@ -188,10 +176,10 @@
                       transform transition duration-300 ease-in-out hover:scale-[1.02] cursor-pointer">
                 
                 <div class="flex items-center gap-5">
-                     <!-- Icono (Feature 2) -->
-                     <div class="flex-shrink-0 bg-accent/10 text-accent p-3 rounded-full group-hover:bg-accent group-hover:text-base-bg transition-colors duration-300">
-                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002-2h2a2 2 0 002 2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    <div class="flex-shrink-0">
+                        <span class="text-xl sm:text-2xl font-bold text-accent">[03]</span>
                     </div>
+                     
                     <div>
                         <h2 class="text-xl sm:text-2xl font-bold text-dark-text">
                             Padelea Clinics
@@ -203,7 +191,6 @@
                 </div>
             </a>
 
-            <!-- Link 4: Padelea Spaces -->
             <a href="#" role="button"
                data-modal-target="quick-view-modal"
                data-title="Padelea Spaces"
@@ -215,10 +202,10 @@
                       transform transition duration-300 ease-in-out hover:scale-[1.02] cursor-pointer">
                 
                 <div class="flex items-center gap-5">
-                     <!-- Icono (Feature 2) -->
-                     <div class="flex-shrink-0 bg-accent/10 text-accent p-3 rounded-full group-hover:bg-accent group-hover:text-base-bg transition-colors duration-300">
-                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h6m-6 4h6m-6 4h6"></path></svg>
+                    <div class="flex-shrink-0">
+                        <span class="text-xl sm:text-2xl font-bold text-accent">[04]</span>
                     </div>
+
                     <div>
                         <h2 class="text-xl sm:text-2xl font-bold text-dark-text">
                             Padelea Spaces
@@ -230,7 +217,6 @@
                 </div>
             </a>
 
-            <!-- Link 5: Padelea Pro Club (Feature 3: Notify Me) -->
             <a href="#" role="button"
                data-modal-target="notify-modal"
                class="group block w-full p-5 sm:p-6 bg-white/0 border-2 border-dark-text/30 rounded-xl
@@ -238,10 +224,10 @@
                       transform transition duration-300 ease-in-out hover:scale-[1.02] cursor-pointer">
                 
                 <div class="flex items-center gap-5">
-                    <!-- Icono (Feature 2) -->
-                    <div class="flex-shrink-0 bg-accent/10 text-accent p-3 rounded-full group-hover:bg-accent group-hover:text-base-bg transition-colors duration-300">
-                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.374c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.01"></path></svg>
+                    <div class="flex-shrink-0">
+                        <span class="text-xl sm:text-2xl font-bold text-accent">[05]</span>
                     </div>
+
                     <div>
                         <h2 class="text-xl sm:text-2xl font-bold text-dark-text">
                             Padelea Pro Club
@@ -255,54 +241,50 @@
 
         </section>
 
-        <!-- Feature 4: Micro-Carrusel de Testimonios -->
         <section id="testimonial-carousel" class="pt-8 text-center space-y-4">
-            <h3 class="text-sm font-semibold text-dark-text/60 uppercase tracking-wider">COMUNIDAD</h3>
+            <h3 class="text-sm font-semibold text-dark-text/60 uppercase tracking-wider">COMMUNITY</h3>
             
             <div class="relative h-28 sm:h-24">
                 <div data-testimonial class="absolute w-full top-0 left-0 transition-opacity duration-700 ease-in-out opacity-100">
-                    <p class="text-lg sm:text-xl italic text-dark-text">"El mejor viaje de pádel de mi vida. La organización y la vibra fueron increíbles."</p>
+                    <p class="text-lg sm:text-xl italic text-dark-text">"The best padel trip of my life. The organization and the vibe were incredible."</p>
                     <p class="font-bold text-accent mt-2">- Carlos G.</p>
                 </div>
                 
                 <div data-testimonial class="absolute w-full top-0 left-0 transition-opacity duration-700 ease-in-out opacity-0">
-                    <p class="text-lg sm:text-xl italic text-dark-text">"Aprendí más en 3 días de clínica que en 6 meses de clases. ¡Nivel top!"</p>
+                    <p class="text-lg sm:text-xl italic text-dark-text">"Connecting with people from all over, sharing laughs and playing padel. An unforgettable 'wow' experience."</p>
                     <p class="font-bold text-accent mt-2">- Sofia R.</p>
                 </div>
 
                 <div data-testimonial class="absolute w-full top-0 left-0 transition-opacity duration-700 ease-in-out opacity-0">
-                    <p class="text-lg sm:text-xl italic text-dark-text">"No solo jugamos pádel, hicimos amigos. Una experiencia 100% recomendable."</p>
+                    <p class="text-lg sm:text-xl italic text-dark-text">"We didn't just play padel, we made friends. A 100% recommended experience."</p>
                     <p class="font-bold text-accent mt-2">- Javier M.</p>
                 </div>
             </div>
         </section>
 
 
-        <!-- Footer: Contacto y Newsletter (Traducido) -->
         <footer class="pt-8 space-y-6 border-t border-dark-text/20 mt-10">
             
-            <!-- Hub de Redes Sociales (Feature 9: Tooltips) -->
             <div class="flex justify-center gap-6">
-                <a href="https://www.instagram.com/padeleacamp" target="_blank" rel="noopener noreferrer" 
-                   data-tooltip="Mira nuestro día a día"
+                <a href="https://www.instagram.com/padeleacamp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" 
+                   data-tooltip="See our day-to-day"
                    class="font-bold text-accent hover:text-dark-text transition duration-200 text-lg">
                     Instagram
                 </a>
                 <span class="text-dark-text/30">|</span>
-                <a href="https://wa.me/TUNUMERO" target="_blank" rel="noopener noreferrer" 
-                   data-tooltip="Reserva o resuelve dudas"
+                <a href="https://wa.me/525635977259" target="_blank" rel="noopener noreferrer" 
+                   data-tooltip="Book or ask questions"
                    class="font-bold text-accent hover:text-dark-text transition duration-200 text-lg">
                     WhatsApp
                 </a>
                 <span class="text-dark-text/30">|</span>
-                <a href="mailto:hola@padelea.camp" 
-                   data-tooltip="Consultas y patrocinios"
+                <a href="mailto:padeleacamp@gmail.com" 
+                   data-tooltip="Inquiries & sponsorships"
                    class="font-bold text-accent hover:text-dark-text transition duration-200 text-lg">
                     Email
                 </a>
             </div>
 
-            <!-- Newsletter CTA (Feature 7: Foco Interactivo) -->
             <div class="text-center space-y-4">
                 <p class="text-lg font-medium">
                     Join the <span class="font-bold">Monday Mail</span>.
@@ -311,20 +293,17 @@
                     <span class="italic">Behind-the-scenes</span> updates and learnings from our community.
                 </p>
 
-                <!-- Formulario (Traducido) -->
                 <form class="flex flex-col sm:flex-row gap-2 pt-2" onsubmit="event.preventDefault(); console.log('Email submitted.');">
                     <input type="email" id="email-input" placeholder="Enter your email here..." class="flex-grow p-3 rounded-lg border-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent bg-base-bg text-dark-text placeholder-dark-text/60" required>
                     <button type="submit" class="bg-accent text-base-bg font-bold py-3 px-6 rounded-lg shadow-md hover:bg-dark-text transition duration-200">
                         Subscribe
                     </button>
                 </form>
-                <!-- Texto de Ayuda (Feature 7) -->
                 <p id="form-helper" class="text-sm text-dark-text/70 mt-2 transition-all duration-300 h-0 opacity-0 overflow-hidden">
-                    Recibirás tips, descuentos exclusivos y cero spam.
+                    You'll get tips, exclusive discounts, and zero spam.
                 </p>
             </div>
             
-            <!-- Firma (Feature 10: Animación) -->
             <p class="pt-4 text-sm italic opacity-80 text-center">
                 Big love, - Eric & the Padelea Team <span class="inline-block animate-pulse-heart">❤️‍🔥</span>
             </p>
@@ -333,55 +312,48 @@
     </main>
 
 
-    <!-- --- MODALES (Features 1 & 3) --- -->
-
-    <!-- Overlay -->
     <div id="modal-overlay" class="modal-overlay-hidden fixed inset-0 bg-dark-text/30 backdrop-blur-sm z-40"></div>
 
-    <!-- Modal: Quick View (Feature 1) -->
     <div id="quick-view-modal" class="modal-hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-lg bg-base-bg text-dark-text p-6 sm:p-8 rounded-xl shadow-2xl z-50">
-        <button class_name="modal-close-btn" class="absolute top-4 right-5 text-dark-text/50 hover:text-dark-text transition-colors">
+        <button class="modal-close-btn absolute top-4 right-5 text-dark-text/50 hover:text-dark-text transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
 
         <div class="space-y-5">
-            <!-- Imagen Placeholder -->
             <div id="modal-img-placeholder" class="w-full h-40 bg-accent/10 rounded-lg flex items-center justify-center text-accent/50 font-bold text-lg">
-                [Imagen del Servicio]
+                [Service Image]
             </div>
             
-            <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold">Título del Servicio</h2>
-            <p id="modal-desc" class="text-base text-dark-text/80">Descripción detallada del servicio...</p>
+            <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold">Service Title</h2>
+            <p id="modal-desc" class="text-base text-dark-text/80">Detailed service description...</p>
             
             <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block w-full text-center bg-accent text-base-bg font-bold py-3 px-6 rounded-lg shadow-md hover:bg-dark-text transition duration-200">
-                Ver Detalles y Reservar
+                View Details & Book
             </a>
         </div>
     </div>
 
-    <!-- Modal: Notify Me (Feature 3) -->
     <div id="notify-modal" class="modal-hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-lg bg-base-bg text-dark-text p-6 sm:p-8 rounded-xl shadow-2xl z-50">
-        <button class_name="modal-close-btn" class="absolute top-4 right-5 text-dark-text/50 hover:text-dark-text transition-colors">
+        <button class="modal-close-btn absolute top-4 right-5 text-dark-text/50 hover:text-dark-text transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
 
         <div class="space-y-4 text-center">
             <span class="text-4xl">🚀</span>
-            <h2 class="text-2xl sm:text-3xl font-bold">¡Próximamente!</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold">Coming Soon!</h2>
             <p class="text-base text-dark-text/80">
-                <span class="font-bold text-accent">Padelea Pro Club</span> está en camino. Deja tu email y serás el primero en saber cuándo lancemos la plataforma de management para clubes.
+                <span class="font-bold text-accent">"Padelea Pro Club"</span> is on its way. Leave your email and be the first to know when we launch the management platform for clubs.
             </p>
             
             <form class="flex flex-col sm:flex-row gap-2 pt-2" onsubmit="event.preventDefault(); console.log('Pro Club Lead captured.');">
-                <input type="email" placeholder="Tu mejor email..." class="flex-grow p-3 rounded-lg border-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent bg-base-bg text-dark-text placeholder-dark-text/60" required>
+                <input type="email" placeholder="Your best email..." class="flex-grow p-3 rounded-lg border-2 border-accent focus:outline-none focus:ring-2 focus:ring-accent bg-base-bg text-dark-text placeholder-dark-text/60" required>
                 <button type="submit" class="bg-accent text-base-bg font-bold py-3 px-6 rounded-lg shadow-md hover:bg-dark-text transition duration-200">
-                    Notificarme
+                    Notify Me
                 </button>
             </form>
         </div>
     </div>
 
-    <!-- --- SCRIPTS --- -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -390,6 +362,7 @@
             const quickViewModal = document.getElementById('quick-view-modal');
             const notifyModal = document.getElementById('notify-modal');
             const allModals = [quickViewModal, notifyModal];
+            // El selector '.modal-close-btn' AHORA FUNCIONARÁ
             const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
 
             // Modal Content
@@ -428,7 +401,7 @@
                     modalTitle.textContent = title;
                     modalDesc.textContent = desc;
                     modalLink.href = link;
-                    modalImgPlaceholder.textContent = `[Imagen: ${imgPlaceholder}]`;
+                    modalImgPlaceholder.textContent = `[Image: ${imgPlaceholder}]`; // Texto traducido
 
                     // Open modal
                     overlay.classList.replace('modal-overlay-hidden', 'modal-overlay-visible');
@@ -436,7 +409,7 @@
                 });
             });
 
-            // Close Listeners
+            // Close Listeners (Ahora incluyen los botones 'X')
             modalCloseBtns.forEach(btn => btn.addEventListener('click', closeModal));
             overlay.addEventListener('click', closeModal);
 
@@ -445,13 +418,15 @@
             const testimonials = document.querySelectorAll('[data-testimonial]');
             let currentTestimonial = 0;
 
-            setInterval(() => {
-                testimonials[currentTestimonial].classList.replace('opacity-100', 'opacity-0');
+            if (testimonials.length > 0) {
+                setInterval(() => {
+                    testimonials[currentTestimonial].classList.replace('opacity-100', 'opacity-0');
 
-                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-                
-                testimonials[currentTestimonial].classList.replace('opacity-0', 'opacity-100');
-            }, 5000); // Cambia cada 5 segundos
+                    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                    
+                    testimonials[currentTestimonial].classList.replace('opacity-0', 'opacity-100');
+                }, 5000); // Cambia cada 5 segundos
+            }
 
 
             // --- Form Focus Logic (Feature 7) ---
